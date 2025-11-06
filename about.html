@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Cafe - About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-yellow-500 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-white font-bold text-xl">Sunny Cafe</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/about.html" class="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="/menu.html" class="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">Menu</a>
+                    <a href="/contact.html" class="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-yellow-600">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/" class="text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="/about.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="/menu.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">Menu</a>
+                <a href="/contact.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-16 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-800 text-center">About Sunny Cafe</h1>
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <p class="text-lg text-gray-700 mb-6">Sunny Cafe is more than just a place for coffee—it's a community hub where friends gather, ideas flow, and every visit feels like a warm embrace. Founded in 2020 by coffee enthusiasts, we pride ourselves on sourcing the finest beans from sustainable farms and roasting them to perfection.</p>
+            <p class="text-lg text-gray-700 mb-6">Our modern space features cozy seating, free Wi-Fi, and a menu crafted with fresh, local ingredients. Whether you're grabbing a quick espresso or settling in for a pastry and chat, we're here to brighten your day.</p>
+            <p class="text-lg text-gray-700">Join us and experience the sunshine in every sip!</p>
+        </div>
+        <div class="text-center">
+            <a href="/menu.html" class="bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-600">View Our Menu</a>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Sunny Cafe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        button.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
