@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Cafe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-yellow-500 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-white font-bold text-xl">Sunny Cafe</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/about.html" class="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="/menu.html" class="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">Menu</a>
+                    <a href="/contact.html" class="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, hidden by default -->
+        <div id="mobile-menu" class="hidden md:hidden bg-yellow-600">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/" class="text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="/about.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="/menu.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">Menu</a>
+                <a href="/contact.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="bg-gradient-to-r from-yellow-400 via-orange-300 to-yellow-500 text-white py-20 text-center">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Sunny Cafe</h1>
+                <p class="text-xl md:text-2xl mb-8">A modern cafe bringing sunshine to your day with fresh brews and cozy vibes.</p>
+                <a href="/menu.html" class="bg-white text-yellow-500 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">View Our Menu</a>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">Our Story</h2>
+                    <p class="text-gray-600 mb-4">Discover the heart behind Sunny Cafe, where passion for coffee meets community.</p>
+                    <a href="/about.html" class="text-yellow-500 font-semibold hover:underline">Learn More →</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">Fresh Menu</h2>
+                    <p class="text-gray-600 mb-4">From espresso to pastries, everything is made with love and fresh ingredients.</p>
+                    <a href="/menu.html" class="text-yellow-500 font-semibold hover:underline">Explore Menu →</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">Visit Us</h2>
+                    <p class="text-gray-600 mb-4">123 Sunny Street, Cityville, CA 12345</p>
+                    <a href="/contact.html" class="text-yellow-500 font-semibold hover:underline">Get Directions →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Sunny Cafe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        button.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
